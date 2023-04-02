@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:firebase_books_app/screens/homePage.dart';
 import 'package:firebase_books_app/screens/onBoarding_Page2.dart';
 import 'package:firebase_books_app/screens/onBoarding_page1.dart';
+import 'package:firebase_books_app/screens/welcome_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +11,7 @@ void main() {
   Firebase.initializeApp();
   runApp(
     MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       initialRoute: 'splashScreen',
       routes: {
@@ -18,6 +19,7 @@ void main() {
         'splashScreen': (context) => const SplashScreen(),
         'onBoarding_page1': (context) => const OnBoardingPage1(),
         'onBoarding_page2': (context) => const OnBoardingPage2(),
+        'welcome_page': (context) => const WelcomePage(),
       },
     ),
   );
